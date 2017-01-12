@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.Master.cs" Inherits="E_Pub.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>E-Pub</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+         
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="scm" runat="server" EnablePageMethods="true" />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <asp:HyperLink ID="currentUserLink" runat="server"></asp:HyperLink>
+                <asp:Button ID="GroupButton" runat="server" Text="Groups" OnClick="GroupButton_Click" />
+                <asp:Button ID="logoutButton" runat="server" Text="Logout" OnClick="logoutButton_Click" />
+                <asp:Button ID="AdminButton" runat="server" OnClick="Admin_Click" Text="Admin" />
+                <br></br>
+                <asp:Label ID="searchLabel" runat="server" Text="Search User: "></asp:Label>
+                <asp:TextBox ID="searchBox" runat="server" Width="239px"></asp:TextBox>
+                <asp:Button ID="searchButton" runat="server" Text="Search" OnClick="searchButton_Click" />
+                <asp:Label ID="searchWarningLabel" runat="server" Text="" ForeColor="Red"></asp:Label>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
